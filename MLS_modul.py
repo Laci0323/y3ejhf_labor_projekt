@@ -1,3 +1,4 @@
+#Majerik László Class-ja a Zenelistához
 class ZeneMLS:
     def __init__(self):
         self.fajl = "zenek.txt"
