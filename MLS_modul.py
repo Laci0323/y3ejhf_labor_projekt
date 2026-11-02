@@ -24,19 +24,19 @@ class ZeneMLS:
         if self.letezik_MLS(cim):
             return False
         self.zenek[cim] = hallgat
-        self.fajlba_ment()
+        self.fajlbament_MLS()
         return True
 
     def torles_MLS(self, cim):
         if not self.letezik_MLS(cim):
             return False
         del self.zenek[cim]
-        self.fajlba_ment()
+        self.fajlbament_MLS()
         return True
 
     def hallgatas_MLS(self, cim):
         if not self.letezik_MLS(cim):
             return False
         self.zenek[cim] += 1
-        self.fajlba_ment()
+        self.fajlbament_MLS()
         return True
