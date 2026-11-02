@@ -1,20 +1,20 @@
-#Majerik László Class-ja a Zenelistához
 class ZeneMLS:
     def __init__(self):
         self.fajl = "zenek.txt"
-        with open (self.fajl, "a", encoding="utf-8"):
+        with open(self.fajl, "a", encoding="utf-8"):
             pass
         self.zenek = self.betoltes_MLS()
+        
     def betoltes_MLS(self):
         zenek = {}
-        with open (self.fajl, "r", encoding="utf-8") as f:
+        with open(self.fajl, "r", encoding="utf-8") as f:
             for sor in f:
                 cim, hallgatas = sor.strip().split("|")
                 zenek[cim] = int(hallgatas)
         return zenek
 
     def fajlbament_MLS(self):
-        with open (self.fajl, "w", encoding="utf-8") as f:
+        with open(self.fajl, "w", encoding="utf-8") as f:
             for cim in self.zenek:
                 f.write(f"{cim}|{self.zenek[cim]}\n")
 
